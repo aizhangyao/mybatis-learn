@@ -7,7 +7,7 @@
     <properties resource="jdbc.properties"/>
 
     <typeAliases>
-        <package name="com.atguigu.mybatis.pojo"/>
+        <package name="com.aiz.mybatis.pojo"/>
     </typeAliases>
 
     <plugins>
