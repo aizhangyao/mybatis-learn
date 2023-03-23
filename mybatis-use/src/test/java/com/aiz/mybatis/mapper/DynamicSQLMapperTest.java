@@ -38,18 +38,18 @@ public class DynamicSQLMapperTest {
      */
 
     @Test
-    public void testInsertMoreByList(){
+    public void testInsertMoreByList() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
-        Emp emp1 = new Emp(null,"a1",23,"男","123@qq.com");
-        Emp emp2 = new Emp(null,"a2",23,"男","123@qq.com");
-        Emp emp3 = new Emp(null,"a3",23,"男","123@qq.com");
+        Emp emp1 = new Emp(null, "夜不收", 26, "男", "yebushou@qq.com");
+        Emp emp2 = new Emp(null, "哨夜", 26, "男", "shaoye@qq.com");
+        Emp emp3 = new Emp(null, "锦衣卫", 26, "男", "jinyiwei@qq.com");
         List<Emp> emps = Arrays.asList(emp1, emp2, emp3);
         System.out.println(mapper.insertMoreByList(emps));
     }
 
     @Test
-    public void testDeleteMoreByArray(){
+    public void testDeleteMoreByArray() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
         int result = mapper.deleteMoreByArray(new Integer[]{6, 7, 8});
@@ -57,7 +57,7 @@ public class DynamicSQLMapperTest {
     }
 
     @Test
-    public void testGetEmpByChoose(){
+    public void testGetEmpByChoose() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
         List<Emp> list = mapper.getEmpByChoose(new Emp(null, "", null, "", ""));
@@ -65,7 +65,7 @@ public class DynamicSQLMapperTest {
     }
 
     @Test
-    public void testGetEmpByCondition(){
+    public void testGetEmpByCondition() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         DynamicSQLMapper mapper = sqlSession.getMapper(DynamicSQLMapper.class);
         List<Emp> list = mapper.getEmpByCondition(new Emp(null, "", null, "", null));

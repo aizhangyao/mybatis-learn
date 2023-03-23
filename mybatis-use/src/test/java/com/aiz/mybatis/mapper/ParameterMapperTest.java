@@ -90,9 +90,9 @@ public class ParameterMapperTest {
 
     @Test
     public void testJDBC() throws Exception {
-        String username = "admin";
-        Class.forName("");
-        Connection connection = DriverManager.getConnection("", "", "");
+        String username = "夜不收";
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/mybatis", "root", "root");
         //PreparedStatement ps = connection.prepareStatement("select * from t_user where username = '" + username + "'");
         PreparedStatement ps = connection.prepareStatement("selelt * from t_user where username = ?");
         ps.setString(1, username);

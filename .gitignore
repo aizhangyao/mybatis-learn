@@ -1,19 +1,33 @@
-/*.iml
-/*.ipr
-/*.iws
-/.classpath
-/.factorypath
-/.idea
-/.project
-/.settings
-/nb*
-/release.properties
-/target
+# maven ignore
+target/
+*.versionsBackup
 
-# These are needed if running in IDE without properties set
-/ibderby
-derby.log
-/bin/
-.mvn/wrapper/maven-wrapper.jar
-.sts4-cache/
-*.releaseBackup
+# eclipse ignore
+.settings/
+.project
+.classpath
+
+# idea ignore
+.idea/
+*.ipr
+*.iml
+*.iws
+
+# temp ignore
+*.log
+*.cache
+*.diff
+*.patch
+*.tmp
+/temp
+/tmp
+app.jar
+
+# system ignore
+.DS_Store
+Thumbs.db
+
+gitlabci/.generated
+
+# VSCode
+.vscode

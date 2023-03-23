@@ -15,7 +15,7 @@ import java.util.List;
 public class SQLMapperTest {
 
     @Test
-    public void testGetUserByLike(){
+    public void testGetUserByLike() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         SQLMapper mapper = sqlSession.getMapper(SQLMapper.class);
         List<User> list = mapper.getUserByLike("a");
@@ -23,7 +23,7 @@ public class SQLMapperTest {
     }
 
     @Test
-    public void testDeleteMore(){
+    public void testDeleteMore() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         SQLMapper mapper = sqlSession.getMapper(SQLMapper.class);
         int result = mapper.deleteMore("1,2,3");
@@ -31,7 +31,7 @@ public class SQLMapperTest {
     }
 
     @Test
-    public void testGetUserByTableName(){
+    public void testGetUserByTableName() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         SQLMapper mapper = sqlSession.getMapper(SQLMapper.class);
         List<User> list = mapper.getUserByTableName("t_user");
@@ -39,7 +39,7 @@ public class SQLMapperTest {
     }
 
     @Test
-    public void testInsertUser(){
+    public void testInsertUser() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         SQLMapper mapper = sqlSession.getMapper(SQLMapper.class);
         User user = new User(null, "王五", "123", 23, "男", "123@163.com");
@@ -47,12 +47,4 @@ public class SQLMapperTest {
         System.out.println(user);
     }
 
-    @Test
-    public void testJDBC() throws Exception {
-        Class.forName("");
-        Connection connection = DriverManager.getConnection("", "", "");
-        PreparedStatement ps = connection.prepareStatement("insert", Statement.RETURN_GENERATED_KEYS);
-        ps.executeUpdate();
-        ResultSet resultSet = ps.getGeneratedKeys();
-    }
 }

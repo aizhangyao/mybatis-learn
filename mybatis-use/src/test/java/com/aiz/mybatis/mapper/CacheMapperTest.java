@@ -15,12 +15,12 @@ import java.io.InputStream;
 public class CacheMapperTest {
 
     @Test
-    public void testOneCache(){
+    public void testOneCache() {
         SqlSession sqlSession1 = SqlSessionUtils.getSqlSession();
         CacheMapper mapper1 = sqlSession1.getMapper(CacheMapper.class);
         Emp emp1 = mapper1.getEmpByEid(1);
         System.out.println(emp1);
-        //mapper1.insertEmp(new Emp(null,"abc",23,"男","123@qq.com"));
+        // mapper1.insertEmp(new Emp(null, "夜不收", 24, "男", "yebushou@qq.com"));
         sqlSession1.clearCache();
         Emp emp2 = mapper1.getEmpByEid(1);
         System.out.println(emp2);
@@ -31,7 +31,7 @@ public class CacheMapperTest {
     }
 
     @Test
-    public void testTwoCache(){
+    public void testTwoCache() {
         try {
             InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
             SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(is);

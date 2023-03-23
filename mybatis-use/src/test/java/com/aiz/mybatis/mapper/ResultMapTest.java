@@ -36,7 +36,7 @@ public class ResultMapTest {
      */
 
     @Test
-    public void testGetEmpAndDeptByStep(){
+    public void testGetEmpAndDeptByStep() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
         Emp emp = mapper.getEmpAndDeptByStepOne(3);
@@ -46,7 +46,7 @@ public class ResultMapTest {
     }
 
     @Test
-    public void testGetEmpAndDept(){
+    public void testGetEmpAndDept() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
         Emp emp = mapper.getEmpAndDept(3);
@@ -54,7 +54,7 @@ public class ResultMapTest {
     }
 
     @Test
-    public void testGetAllEmp(){
+    public void testGetAllEmp() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
         List<Emp> list = mapper.getAllEmp();
@@ -62,7 +62,7 @@ public class ResultMapTest {
     }
 
     @Test
-    public void testGetDeptAndEmp(){
+    public void testGetDeptAndEmp() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         DeptMapper mapper = sqlSession.getMapper(DeptMapper.class);
         Dept dept = mapper.getDeptAndEmp(1);
@@ -70,7 +70,7 @@ public class ResultMapTest {
     }
 
     @Test
-    public void testGetDeptAndEmpByStep(){
+    public void testGetDeptAndEmpByStep() {
         SqlSession sqlSession = SqlSessionUtils.getSqlSession();
         DeptMapper mapper = sqlSession.getMapper(DeptMapper.class);
         Dept dept = mapper.getDeptAndEmpByStepOne(1);
