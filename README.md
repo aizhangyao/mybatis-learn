@@ -21,4 +21,15 @@ mybatis-learn主要包括以下几个模块：
 * mybatis-plus-use
     
 * mybatis-plus-generator
-    
+
+* mini-mybatis
+  
+  手写精简mybatis，注解版
+
+* mini-mybatis-xml
+  
+  手写精简mybatis，解析XML版
+
+* mini-mybatis-test
+  
+  mini-mybatis-xml的测试工程

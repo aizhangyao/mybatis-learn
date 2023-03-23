@@ -1,0 +1,21 @@
+<mapper namespace="com.aiz.dao.IUserDao">
+    <!--唯一标识：namespace.id  statementId-->
+    <!--查询所有-->
+    <!--
+        规范：接口的全路径要和namespace的值保持一致
+             接口中的方法名要和id的值保持一致
+    -->
+    <select id="findAll" resultType="com.aiz.pojo.User">
+        select * from t_user
+    </select>
+
+    <!--按条件进行查询-->
+    <!--
+        User user = new User();
+        user.setId(1);
+        user.setUserName("夜不收");
+    -->
+    <select id="findByCondition" resultType="com.aiz.pojo.User" parameterType="com.aiz.pojo.User">
+        select * from t_user where id = #{id} and username = #{username}
+    </select>
+</mapper>
